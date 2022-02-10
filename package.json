@@ -71,5 +71,19 @@
     "@storybook/testing-library": "^0.0.7",
     "@storybook/testing-react": "^1.0.0",
     "jest": "^27.5.1"
+  },
+    "jest": {
+      "transform": {
+        "^.+\\.js$": "babel-jest",
+       "^.+\\.stories\\.[jt]sx?$": "<rootDir>node_modules/@storybook/addon-storyshots/injectFileName",
+        "^.+\\.svelte$": "jest-transform-svelte"
+      },
+     "transformIgnorePatterns": ["node_modules/(?!(@storybook/svelte)/)"],
+    }
   }
 }
+
+
+
+
+
